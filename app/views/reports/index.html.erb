@@ -1,0 +1,43 @@
+<h1>Listing reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equipment</th>
+      <th>Subject</th>
+      <th>Idate</th>
+      <th>Itame</th>
+      <th>Rname</th>
+      <th>Location</th>
+      <th>Cname</th>
+      <th>Descript</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reports.each do |report| %>
+      <tr>
+        <td><%= report.equipment_id %></td>
+        <td><%= report.subject %></td>
+        <td><%= report.idate %></td>
+        <td><%= report.itame %></td>
+        <td><%= report.rname %></td>
+        <td><%= report.location %></td>
+        <td><%= report.cname %></td>
+        <td><%= report.descript %></td>
+        <td><%= report.status %></td>
+        <td><%= link_to 'Show', report %></td>
+        <td><%= link_to 'Edit', edit_report_path(report) %></td>
+        <td><%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Report', new_report_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jcode:</strong>
+  <%= @equipment.jcode %>
+</p>
+
+<p>
+  <strong>Serial:</strong>
+  <%= @equipment.serial %>
+</p>
+
+<p>
+  <strong>Mdate:</strong>
+  <%= @equipment.mdate %>
+</p>
+
+<p>
+  <strong>Pnumber:</strong>
+  <%= @equipment.pnumber %>
+</p>
+
+<%= link_to 'Edit', edit_equipment_path(@equipment) %> |
+<%= link_to 'Back', equipment_index_path %>

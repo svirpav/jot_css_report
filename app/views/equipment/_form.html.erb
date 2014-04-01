@@ -1,0 +1,33 @@
+<%= form_for(@equipment) do |f| %>
+  <% if @equipment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@equipment.errors.count, "error") %> prohibited this equipment from being saved:</h2>
+
+      <ul>
+      <% @equipment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :jcode %><br>
+    <%= f.text_field :jcode %>
+  </div>
+  <div class="field">
+    <%= f.label :serial %><br>
+    <%= f.number_field :serial %>
+  </div>
+  <div class="field">
+    <%= f.label :mdate %><br>
+    <%= f.date_select :mdate %>
+  </div>
+  <div class="field">
+    <%= f.label :pnumber %><br>
+    <%= f.text_field :pnumber %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
