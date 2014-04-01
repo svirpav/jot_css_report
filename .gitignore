@@ -16,3 +16,9 @@
 /tmp
 .project
 .secret
+.DS_Store
+.idea
+*.swp
+*~
+doc/
+/.bundle

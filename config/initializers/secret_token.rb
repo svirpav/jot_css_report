@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-JotCssReport::Application.config.secret_key_base = 'd2b7d2ad051e0eb95de2fe03f9e45a4fa4a17a66bb0973702a232ccb4e464eba75e01c81775662a5f5fdcf1d287117e3f4f860e03eb0c8c54d53fecc32d5deab'
+
+require 'securerandom'
+
+def secure_token
+	token_file = Rails.root.join('.secret')
+	if File.exist?(token_file)
+		#Use the existing token
+		File.read(token_file).chomp
+	else
+		#Generate a new token and store it token_file
+		token = SecureRandom.hex(64)
+		File.write(token_file, token)
+		token
+	end
+end
+
+JotCssReport::Application.config.secret_key_base = secure_token
