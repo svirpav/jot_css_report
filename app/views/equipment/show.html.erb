@@ -1,24 +1,33 @@
+<%provide(:title,'Equipment information')%>
+<%provide(:name,'Equipment information')%>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Jcode:</strong>
+	<strong>Equipment ID</strong>
+	<%= @equipment.id%>
+</p>
+
+<p>
+  <strong>J-Code:</strong>
   <%= @equipment.jcode %>
 </p>
 
 <p>
-  <strong>Serial:</strong>
+  <strong>Serial Number:</strong>
   <%= @equipment.serial %>
 </p>
 
 <p>
-  <strong>Mdate:</strong>
+  <strong>Manufacturing Date:</strong>
   <%= @equipment.mdate %>
 </p>
 
 <p>
-  <strong>Pnumber:</strong>
+  <strong>Project Number:</strong>
   <%= @equipment.pnumber %>
 </p>
 
 <%= link_to 'Edit', edit_equipment_path(@equipment) %> |
-<%= link_to 'Back', equipment_index_path %>
+<%= link_to 'Back', equipment_index_path %> |
+<%= link_to 'New Report', new_report_path %>

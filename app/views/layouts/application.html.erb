@@ -1,12 +1,24 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JotCssReport</title>
+  <title>Jot Service Report| <%= yield(:title)%></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+ <style>
+   .gradient {
+    background: linear-gradient(to top, #0000FF, #0000FF);
+    padding: 20px;
+    border: 1px solid #333;
+    color: #FFFFFF
+   }
+  </style>
+
 </head>
 <body>
+
+ <p class="gradient"><strong>Jot Automation </strong> | <strong> <%= yield(:name)%></strong></p> 
 
 <%= yield %>
 
