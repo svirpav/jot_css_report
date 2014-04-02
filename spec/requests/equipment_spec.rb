@@ -1,11 +1,13 @@
 require 'spec_helper'
 
 describe "Equipment" do
-  describe "GET /equipment" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get equipment_index_path
-      response.status.should be(200)
-    end
-  end
+
+	describe "New Equipment Page" do
+		it "Should have All forms"do
+		 visit '/equipment/new'
+		 expect(page).to have_content('J-Code')
+		 expect(page).to have_content('Serial Number')
+		end
+	end
+
 end
