@@ -4,7 +4,7 @@ class CreateReports < ActiveRecord::Migration
       t.integer :equipment_id
       t.string :subject
       t.date :idate
-      t.time :itame
+      t.time.to_s :itame
       t.string :rname
       t.string :location
       t.string :cname
