@@ -19,20 +19,6 @@
 </head>
 
 
-<body>
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "Jot Service Report", '#', id: "logo"%>
-      <nav>
-        <ul class="nav pull-right">
-        <li><%= link_to "Home", '#'%></li>
-      </nav>
-    </div>
-  </div>
-</header>
-
-
  <p class="gradient"><strong><%= full_name(yield(:name))%></strong></p> 
 
 <%= yield %>
