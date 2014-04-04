@@ -1,7 +1,12 @@
 <% provide(:title, 'New Report')%>
 <% provide(:name,'New Incident Report')%>
+<% provide(:lname1,'List of Reports')%>
+<% provide(:link1, reports_path)%>
+<% provide(:lname2, 'Equipment list')%>
+<% provide(:link2, equipment_index_path)%>
+<% provide(:lname3, 'Create New Equipment')%>
+<% provide(:link3, new_equipment_path)%>
 
 
 <%= render 'form' %>
 
-<%= link_to 'Back', reports_path %>

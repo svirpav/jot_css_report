@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jot Service Report | <%= yield(:title)%></title>
+  <title><%= full_title(yield(:title))%></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -18,9 +18,11 @@
 </head>
 <body>
 
- <p class="gradient"><strong>Jot Automation Customer Service </strong> | <strong> <%= yield(:name)%></strong></p> 
+ <p class="gradient"><strong><%= full_name(yield(:name))%></strong></p> 
 
 <%= yield %>
+
+<p class="gradient"><strong>Go To | </strong><strong><%= link_to yield(:lname1), yield(:link1)%></strong> | <strong><%= link_to yield(:lname2), yield(:link2)%></strong> | <strong><%= link_to yield(:lname3), yield(:link3)%></strong> | <strong><%= link_to yield(:lname4), yield(:link4)%></strong></p> 
 
 </body>
 </html>

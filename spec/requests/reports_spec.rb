@@ -1,11 +1,23 @@
 require 'spec_helper'
 
-describe "Reports" do
-  describe "GET /reports" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get reports_path
-      response.status.should be(200)
-    end
-  end
+    describe "Report Page" do
+    	describe "Index" do
+    		it "Should have 'Eqiuipment list'" do
+    			visit '/reports'
+    			expect(page).to have_content("Equipment list")
+    		end
+
+    		it "Should have 'Create New Equipment'" do
+    			visit '/reports'
+    			expect(page).to have_content('Create New Equipment')
+    			
+    		end
+
+    		it "Should have 'New Report'" do
+    			visit'/reports'
+    			expect(page).to have_content('New Report')
+    		end
+    	end
+
+
 end
