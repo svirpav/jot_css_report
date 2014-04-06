@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <style>
    .gradient {
     background: linear-gradient(to top, #0000FF, #0000FF);
@@ -21,14 +22,31 @@
     font-size: 14px;
    }
 
+   .top_line{
+    background: #0000FF;
+    padding: 20px;
+    color: #FFFFFF;
+    font-size: 14px;
+   }
+
 
   </style>
 
 </head>
 
 <body>
-  
-  <p class="gradient"><strong><%= full_name(yield(:name))%></strong></p>
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="top_line">
+      <a><img src="http://www.jotautomation.com/media/layout/logo.png" alt=""></a> |
+         <strong><%= yield(:name)%></strong>
+    </div>
+  </div>
+</header>
+  <p>
+    
+  </p>
 
   <div class="container">
     <%= yield %>
