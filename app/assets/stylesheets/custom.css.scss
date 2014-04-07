@@ -1,0 +1,60 @@
+@import "bootstrap";
+
+/* body */
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	padding-top: 120px;
+}
+
+section {
+	overflow: auto;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.center {
+	text-align: center;
+}
+
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  padding-top: 9px;
+}
+
+/* bottom */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
+
+small {
+	
+	float: left;
+}
+
+footer ul {
+	
+	float: right;
+	list-style: none;
+}
+
+footer ul li {
+	float: left;
+	margin-left: 10px;
+}
+
+.jot-bar {
+	
+	background-color: #0000FF;
+}

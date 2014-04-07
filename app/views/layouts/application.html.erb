@@ -6,59 +6,23 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
-   .gradient {
-    background: linear-gradient(to top, #0000FF, #0000FF);
-    padding: 20px;
-    border: 1px solid #333;
-    color: #FFFFFF
-   }
-
-   .botom_line{
-    background: #0000FF;
-    padding: 20px;
-    color: #FFFFFF;
-    font-size: 14px;
-   }
-
-   .top_line{
-    background: #0000FF;
-    padding: 20px;
-    color: #FFFFFF;
-    font-size: 14px;
-   }
-
-
-  </style>
-
+  <%= render 'layouts/shim'%>
 </head>
 
-<body>
-
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="top_line">
-      <a><img src="http://www.jotautomation.com/media/layout/logo.png" alt=""></a> |
-         <strong><%= yield(:name)%></strong>
-    </div>
-  </div>
-</header>
-  <p>
+  <body>
     
-  </p>
+    <%= render '/layouts/header' %>
 
-  <div class="container">
-    <%= yield %>
-  </div>
+    <div class="container">
+      <%= yield %>
+    </div>
 
+    <div class="container">
+       <%= render '/layouts/footer' %>
+    </div>
 
-<div class="botom_line">
+   
+  </body>
 
-  <strong>Go To | </strong><strong><%= link_to yield(:lname1), yield(:link1), style: 'color:#FFFFFF'%></strong> | <strong><%= link_to yield(:lname2), yield(:link2), style: 'color:#FFFFFF'%></strong> | <strong><%= link_to yield(:lname3), yield(:link3), style: 'color:#FFFFFF'%></strong> | <strong><%= link_to yield(:lname4), yield(:link4), style: 'color#FFFFFF'%></strong>
-  
-</div>
-
-</body>
 
 </html>

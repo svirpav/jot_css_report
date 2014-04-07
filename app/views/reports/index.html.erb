@@ -7,12 +7,11 @@
 <% provide(:lname3, 'Create New Report')%>
 <% provide(:link3, new_report_path)%>
 
-<table width="1200" border="1">
+<table width="930" border="1">
   <thead>
     <tr>
       <th>Equipment ID</th>
       <th>Subject</th>
-      <th>Incident date</th>
       <th>Incident time</th>
       <th>Reporter name</th>
       <th>Location</th>
@@ -30,7 +29,6 @@
         <td><%= report.equipment_id %></td>
         <td><%= report.subject %></td>
         <td><%= report.idate %></td>
-        <td><%= report.itame %></td>
         <td><%= report.rname %></td>
         <td><%= report.location %></td>
         <td><%= report.cname %></td>
