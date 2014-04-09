@@ -1,6 +1,9 @@
 JotCssReport::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/help"
+  get "users/new"
+  root 'static_pages#home'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+
   resources :reports
 
   resources :equipment
