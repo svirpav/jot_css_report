@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140401172808) do
+ActiveRecord::Schema.define(version: 20140410124808) do
 
   create_table "equipment", force: true do |t|
     t.string   "jcode"
@@ -25,13 +25,20 @@ ActiveRecord::Schema.define(version: 20140401172808) do
   create_table "reports", force: true do |t|
     t.integer  "equipment_id"
     t.string   "subject"
-    t.date     "idate"
-    t.time     "itame"
+    t.datetime "sdate"
+    t.datetime "fdate"
     t.string   "rname"
     t.string   "location"
     t.string   "cname"
-    t.text     "descript"
+    t.text     "description"
     t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
