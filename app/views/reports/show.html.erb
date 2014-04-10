@@ -11,44 +11,55 @@
 <% provide(:lname4, 'Edit Report')%>
 <% provide(:link4, edit_report_path(@report))%>
 
-<p id="notice"><%= notice %></p>
 
+
+<p id="notice"><%= notice %></p>
 
 <table width="600", border="1">
 
     <tr>
-      <td width="110"><strong>Equipment ID:</strong></td>
-      <td width="490"><strong><%= @report.equipment_id%></strong></td>
+      <td width="140"><strong>Equipment ID:</strong></td>
+      <td width="460"><strong><%= @report.equipment_id%></strong></td>
     </tr>
 
     <tr>
-      <td width="110"><strong>Subject:</strong></td>
-      <td width="490"><%= @report.subject %></td>
+      <td width="140"><strong>Subject:</strong></td>
+      <td width="460"><%= @report.subject %></td>
     </tr>
 
     <tr>
-      <td width="120"><strong>Reporter name:</strong></td>
-      <td width="490"><%= @report.rname %></td>
+      <td width="140"><strong>Incident start:</strong></td>
+      <td width="460"><%= @report.sdate %></td>
     </tr>
 
     <tr>
-      <td width="110"><strong>Location:</strong></td>
-      <td width="490"><%= @report.location %></td>
+      <td width="140"><strong>Incident resolved:</strong></td>
+      <td width="460"><%= @report.fdate %></td>
     </tr>
 
     <tr>
-      <td width="110"><strong>Customer</strong></td>
-      <td width="490"><%= @report.cname %></td>
+      <td width="140"><strong>Reporter name:</strong></td>
+      <td width="460"><%= @report.rname %></td>
     </tr>
 
     <tr>
-      <td width="110"><strong>Description:</strong></td>
-      <td width="490"><%= @report.descript %></td>
+      <td width="140"><strong>Location:</strong></td>
+      <td width="460"><%= @report.location %></td>
     </tr>
 
     <tr>
-      <td width="110"><strong>Status:</strong></td>
-      <td width="490"><%= @report.status %></td>
+      <td width="140"><strong>Customer</strong></td>
+      <td width="460"><%= @report.cname %></td>
+    </tr>
+
+    <tr>
+      <td width="140"><strong>Description:</strong></td>
+      <td width="460"><%= @report.description %></td>
+    </tr>
+
+    <tr>
+      <td width="140"><strong>Status:</strong></td>
+      <td width="460"><%= @report.status %></td>
     </tr>
 </table>
 
