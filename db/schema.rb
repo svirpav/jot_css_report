@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140414203110) do
+ActiveRecord::Schema.define(version: 20140414231527) do
 
   create_table "equipment", force: true do |t|
     t.string   "jcode"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20140414203110) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "equipment", ["serial"], name: "index_equipment_on_serial", unique: true
 
   create_table "reports", force: true do |t|
     t.integer  "equipment_id"
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(version: 20140414203110) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
