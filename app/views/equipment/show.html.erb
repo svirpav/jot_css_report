@@ -1,42 +1,39 @@
 <%provide(:title,'Equipment information')%>
 <%provide(:name,'Equipment information')%>
-<%provide(:link1, equipment_index_path)%>
-<% provide(:lname1,'List of Reports')%>
-<% provide(:link1, reports_path)%>
-<% provide(:lname2, 'Equipment list')%>
-<% provide(:link2, equipment_index_path)%>
-<% provide(:lname3, 'Create New Equipment')%>
-<% provide(:link3, new_equipment_path)%>
-<% provide(:lname4, 'Edit Equipment infrmation')%>
-<% provide(:link4, edit_equipment_path(@equipment))%>
 
 
 <p id="notice"><%= notice %></p>
 
+<p>
+  <%= link_to 'Edit', edit_equipment_path %> |
+  <%= link_to 'Back', equipment_index_path %> |
+  <%= link_to 'New Report', new_report_path %>
+</p>
+
 <table width="600", border="1">
   <tr>
-    <td width="110"><strong>Equipment ID</strong></td>
-    <td width="490"><%= @equipment.id%></td>
+    <td width="130"><strong>Equipment ID</strong></td>
+    <td width="470"><%= @equipment.id%></td>
   </tr>
 
   <tr>
-    <td width="110"><strong>J-Code:</strong></td>
-    <td width="490"><%= @equipment.jcode %></td>
+    <td width="130"><strong>J-Code:</strong></td>
+    <td width="470"><%= @equipment.jcode %></td>
   </tr>
 
   <tr>
-    <td width="110"><strong>Serial Number:</strong></td>
-    <td width="490"><%= @equipment.serial %></td>
+    <td width="130"><strong>Serial Number:</strong></td>
+    <td width="470"><%= @equipment.serial %></td>
   </tr>
 
   <tr>
-    <td width="110"><strong>Manufacturing Date:</strong></td>
-    <td width="490"><%= @equipment.mdate %></td>
+    <td width="130"><strong>Manufacturing Date:</strong></td>
+    <td width="470"><%= @equipment.mdate %></td>
   </tr>
 
   <tr>
-    <td width="110"><strong>Project Number:</strong></td>
-    <td width="490"><%= @equipment.pnumber %></td>
+    <td width="130"><strong>Project Number:</strong></td>
+    <td width="470"><%= @equipment.pnumber %></td>
   </tr>
 </table>
 

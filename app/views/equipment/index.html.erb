@@ -1,12 +1,9 @@
 <% provide(:title,'List of Equipment')%>
 <% provide(:name,'List of JOT Equipment')%>
-<% provide(:lname1, 'List of Reports')%>
-<% provide(:link1, reports_path)%>
-<% provide(:lname2, 'Create New Equipment')%>
-<% provide(:link2, new_equipment_path)%>
-<% provide(:lname3, 'Create New Report')%>
-<% provide(:link3, new_report_path)%>
 
+<p>
+  <%= link_to "Crate New Equipment ", new_equipment_path %>
+</p>
 
 <table width="930", border="1">
   <thead>
@@ -34,7 +31,6 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table><br>
 
-<br>
 

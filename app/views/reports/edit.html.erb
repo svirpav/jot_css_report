@@ -1,15 +1,11 @@
 <% provide(:title,'Edit Report')%>
 <% provide(:name, 'Edit Report')%>
-<% provide(:title, 'New Report')%>
-<% provide(:name,'New Incident Report')%>
-<% provide(:lname1,'List of Reports')%>
-<% provide(:link1, reports_path)%>
-<% provide(:lname2, 'Equipment list')%>
-<% provide(:link2, equipment_index_path)%>
-<% provide(:lname3, 'Create New Equipment')%>
-<% provide(:link3, new_equipment_path)%>
 
 
+<p>
+	<%= link_to 'Show' , @report %> |
+	<%= link_to 'Back', reports_path %>
+</p>
 
 <%= render 'form' %>
 

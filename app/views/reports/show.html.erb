@@ -1,19 +1,13 @@
 <% provide(:title, 'Report')%>
 <% provide(:name,'Report information')%>
-<% provide(:title, 'New Report')%>
-<% provide(:name,'New Incident Report')%>
-<% provide(:lname1,'List of Reports')%>
-<% provide(:link1, reports_path)%>
-<% provide(:lname2, 'Equipment list')%>
-<% provide(:link2, equipment_index_path)%>
-<% provide(:lname3, 'Create New Equipment')%>
-<% provide(:link3, new_equipment_path)%>
-<% provide(:lname4, 'Edit Report')%>
-<% provide(:link4, edit_report_path(@report))%>
-
 
 
 <p id="notice"><%= notice %></p>
+
+<p>
+  <%= link_to 'Edit', edit_report_path(@report) %> |
+  <%= link_to 'Back', reports_path %>
+</p>
 
 <table width="600", border="1">
 

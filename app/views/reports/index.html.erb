@@ -1,11 +1,9 @@
 <% provide(:title,'List of reports')%>
 <% provide(:name,'List of incident reports')%>
-<% provide(:lname1, 'Equipment list')%>
-<% provide(:link1, equipment_index_path)%>
-<% provide(:lname2, 'Create New Equipment')%>
-<% provide(:link2, new_equipment_path)%>
-<% provide(:lname3, 'Create New Report')%>
-<% provide(:link3, new_report_path)%>
+
+<p>
+  <%= link_to 'Create New Report', new_report_path %>
+</p>
 
 <table width="930" border="1">
   <thead>
