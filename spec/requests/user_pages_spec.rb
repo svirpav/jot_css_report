@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "UserPages" do
 	before do
-		@user = User.new(name: "Example User", email: "user@example.com", password: "example1", password_confirmation: "example1")
+		@user = User.new(id: "1", name: "Example User", email: "user@example.com", password: "example1", password_confirmation: "example1")
 	end
 
 	subject{ @user}
@@ -86,5 +86,13 @@ describe "UserPages" do
     it { should_not eq user_for_invalid_password }
     specify { expect(user_for_invalid_password).to be_false }
   end
-end
+
+  describe "profile_page" do
+    let(:user) { FactoryGirl.create(:user) }
+    before { visit user_path(user)}
+
+    it { should have_title('Jot Service Report')}
+  end
+
+  end
 end
