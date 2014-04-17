@@ -8,6 +8,7 @@
 	<div class="span6 offset3">
 
 		<%= form_for(@user) do |f| %>
+		<%= render 'shared/error_message' %>
 
 		<%= f.label :name, "Name" %>
 		<%= f.text_field :name %>
@@ -16,7 +17,7 @@
 		<%= f.text_field :email %>
 
 		<%= f.label :password, "Password" %>
-		<%= f.password_field :Password %>
+		<%= f.password_field :password %>
 
 		<%= f.label :password_confirmation, "Confirm Password" %>
 		<%= f.password_field :password_confirmation %>
