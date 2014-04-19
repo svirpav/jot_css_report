@@ -16,4 +16,3 @@
 //= require bootstrap
 //= require_tree .
 
-config.assets.precompile += %w( application.js )
