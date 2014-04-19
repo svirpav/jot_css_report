@@ -2,7 +2,7 @@
 <% provide(:name,'Report information')%>
 
 
-<p id="notice"><%= notice %></p>
+<% if signed_in? %>
 
 <p>
   <%= link_to 'Edit', edit_report_path(@report) %> |
@@ -56,5 +56,11 @@
       <td width="460"><%= @report.status %></td>
     </tr>
 </table>
+
+<% else %>
+You are not Authorized!
+<% end %>
+
+
 
 

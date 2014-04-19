@@ -1,7 +1,8 @@
 <% provide(:title,'List of Equipment')%>
 <% provide(:name,'List of JOT Equipment')%>
 
-<p>
+<% if signed_in? %>
+	<p>
   <%= link_to "Crate New Equipment ", new_equipment_path %>
 </p>
 
@@ -32,5 +33,11 @@
     <% end %>
   </tbody>
 </table><br>
+<% else %>
+	You are not Authorized!
+<% end %>
+
+
+
 
 

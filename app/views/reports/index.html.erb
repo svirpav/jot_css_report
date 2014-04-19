@@ -1,7 +1,8 @@
 <% provide(:title,'List of reports')%>
 <% provide(:name,'List of incident reports')%>
 
-<p>
+<% if signed_in? %>
+  <p>
   <%= link_to 'Create New Report', new_report_path %>
 </p>
 
@@ -40,4 +41,13 @@
 </table>
 
 <br>
+
+<% else %>
+
+You are not Authorized!
+
+<% end %>
+
+
+
 

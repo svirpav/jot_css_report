@@ -1,8 +1,8 @@
 <%provide(:title,'Equipment information')%>
 <%provide(:name,'Equipment information')%>
 
+<% if signed_in? %>
 
-<p id="notice"><%= notice %></p>
 
 <p>
   <%= link_to 'Edit', edit_equipment_path %> |
@@ -36,5 +36,11 @@
     <td width="470"><%= @equipment.pnumber %></td>
   </tr>
 </table>
+
+<% else %>
+  You are not Authorized!
+<% end %>
+
+
 
 

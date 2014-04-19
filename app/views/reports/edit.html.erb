@@ -2,10 +2,19 @@
 <% provide(:name, 'Edit Report')%>
 
 
+<% if signed_in? %>
 <p>
 	<%= link_to 'Show' , @report %> |
 	<%= link_to 'Back', reports_path %>
 </p>
 
 <%= render 'form' %>
+
+<% else %>
+
+You are not Authorized!
+
+<% end %>
+
+
 
