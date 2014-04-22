@@ -1,10 +1,11 @@
 class EquipmentController < ApplicationController
   before_action :set_equipment, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user
 
   # GET /equipment
   # GET /equipment.json
   def index
-    @equipment = Equipment.all
+    @equipment = Equipment.paginate(page: params[:page])
   end
 
   # GET /equipment/1
@@ -70,5 +71,17 @@ class EquipmentController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def equipment_params
       params.require(:equipment).permit(:jcode, :serial, :mdate, :pnumber)
+    end
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "You are not Authorized!"
+      end
+    end
+
+    def correct_user
+    @user = User.find(params[:id])
+    redirect_to (root_url) unless current_user?(@user)
     end
 end

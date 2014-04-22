@@ -1,10 +1,11 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user
 
   # GET /reports
   # GET /reports.json
   def index
-    @reports = Report.all
+    @reports = Report.paginate(page: params[:page])
   end
 
   # GET /reports/1
@@ -71,4 +72,12 @@ class ReportsController < ApplicationController
     def report_params
       params.require(:report).permit(:equipment_id, :subject, :sdate, :fdate, :rname, :location, :cname, :description, :status)
     end
+
+   def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "You are not Authorized!"
+      end
+    end
+    
 end

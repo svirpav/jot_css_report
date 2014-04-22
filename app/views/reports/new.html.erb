@@ -1,7 +1,6 @@
 <% provide(:title, 'New Report')%>
 <% provide(:name,'New Incident Report')%>
 
-<% if signed_in? %>
 
 <p>
 	<%= link_to 'Back', reports_path %>
@@ -9,9 +8,6 @@
 
 <%= render 'form' %>
 
-<% else %>
-	You are not Authorized!
-<% end %>
 
 
 

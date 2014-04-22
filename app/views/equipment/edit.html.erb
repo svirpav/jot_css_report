@@ -1,17 +1,12 @@
 <% provide(:title,'Edit Equipment information')%>
 <% provide(:name,'Edit Equipment information')%>
 
-<% if signed_in? %>
 	<p>
 	<%= link_to 'Show', @equipment %> |
 	<%= link_to 'Back', equipment_index_path %>
 	</p>
 
 <%= render 'form' %>
-
-<% else %>
-	You are not Authorized!
-<% end %>
 
 
 

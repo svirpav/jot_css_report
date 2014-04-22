@@ -1,10 +1,11 @@
 <% provide(:title,'List of Equipment')%>
 <% provide(:name,'List of JOT Equipment')%>
 
-<% if signed_in? %>
 	<p>
   <%= link_to "Crate New Equipment ", new_equipment_path %>
 </p>
+
+<%= will_paginate %>
 
 <table width="930", border="1">
   <thead>
@@ -33,9 +34,11 @@
     <% end %>
   </tbody>
 </table><br>
-<% else %>
-	You are not Authorized!
-<% end %>
+
+<%= will_paginate %>
+
+
+
 
 
 
